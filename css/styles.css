@@ -767,7 +767,7 @@ body.bg-driven { transition: none; }
 }
 .section-view.open { opacity: 1; visibility: visible; }
 .section-view-scroll { height: 100%; overflow-y: auto; overscroll-behavior: contain; }
-.sv-hero { height: 100vh; position: relative; display: flex; align-items: flex-end; }
+.sv-hero { height: 100vh; position: relative; display: flex; align-items: flex-end; overflow: hidden; /* the parallax video never bleeds past the header */ }
 .sv-hero video {
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover;
