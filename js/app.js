@@ -315,6 +315,7 @@
   }
 
   function showHomeIntroOverlay() {
+    return; // retired: no ecosystem hint overlay
     if (!intro || sessionStorage.getItem("vela-intro-seen")) return;
     intro.classList.add("show");
     const closeIntro = () => {
