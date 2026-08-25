@@ -224,9 +224,10 @@ videoDisc.renderOrder = 1;
 /* ---------------- section videos ---------------- */
 const VIDEO_SRC = {
   default: "assets/center.mp4",
-  citizen: "assets/sec-citizen.mp4",
-  consumer: "assets/sec-consumer.mp4",
-  assistant: "assets/sec-assistant.mp4",
+  citizen: "assets/hdr-citizen.mp4",   // same footage as each section page
+  consumer: "assets/hdr-consumer.mp4",
+  assistant: "assets/hdr-assistant.mp4",
+  tde: "assets/hdr-tde.mp4",
 };
 const videoCache = {};
 let globePulse = 0;
@@ -591,6 +592,7 @@ function updateHover(nx, ny) {
   const nextOuter = name === "outer";
   if (nextOuter !== hoverOuter) {
     hoverOuter = nextOuter;
+    setGlobeVideo(hoverOuter ? "tde" : null);
     outerRing.redraw(drawOuter);
     redrawSegLabels();
     window.dispatchEvent(new CustomEvent("vela:hover", { detail: { key: hoverKey, outer: hoverOuter } }));

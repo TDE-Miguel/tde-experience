@@ -133,10 +133,37 @@
   );
   $$("[data-contact-close]").forEach((b) => b.addEventListener("click", () => nav.classList.remove("open-contact")));
   const cform = $("[data-contact-form]");
-  if (cform) cform.addEventListener("submit", (e) => {
+  if (cform) cform.addEventListener("submit", async (e) => {
     e.preventDefault();
-    cform.querySelectorAll("input, textarea, button").forEach((el) => (el.disabled = true));
-    $("[data-contact-ok]").hidden = false;
+    const btn = cform.querySelector(".cf-send");
+    btn.disabled = true;
+    btn.textContent = "Sending...";
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/info@tde.rocks", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: cform.name.value,
+          email: cform.email.value,
+          message: cform.message.value,
+          _subject: "TDE website contact",
+        }),
+      });
+      if (!res.ok) throw new Error("send failed");
+      cform.querySelectorAll("input, textarea, button").forEach((el) => (el.disabled = true));
+      $("[data-contact-ok]").hidden = false;
+    } catch (err) {
+      btn.disabled = false;
+      btn.textContent = "Send";
+      let fail = cform.querySelector(".cf-fail");
+      if (!fail) {
+        fail = document.createElement("p");
+        fail.className = "cf-fail text-body";
+        fail.style.color = "#ff9d9d";
+        cform.appendChild(fail);
+      }
+      fail.textContent = "Something went wrong - please email info@tde.rocks directly.";
+    }
   });
 
   /* ---------------- arm links carousel (mobile) ---------------- */
