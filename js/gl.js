@@ -237,7 +237,7 @@ function getVideoTex(k) {
   if (!el) {
     el = document.createElement("video");
     el.crossOrigin = "anonymous"; // CDN-hosted footage must not taint the WebGL texture
-    el.src = VIDEO_SRC[k] + "?cors=1"; // bust pre-CORS media-cache entries
+    el.src = VIDEO_SRC[k] + "?cors=2"; // bust pre-CORS media-cache entries
     el.muted = true; el.loop = true; el.playsInline = true;
     el.style.cssText = "position:fixed;width:2px;height:2px;opacity:0;pointer-events:none";
     document.body.appendChild(el);
