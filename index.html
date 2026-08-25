@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technology Design Experience | TDE</title>
+  <meta name="description" content="VELA — operating system for the creator economy. Clone study v0.1" />
+  <link rel="stylesheet" href="css/styles.css?v=83" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='none' stroke='%2300d4ff' stroke-width='2'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ============================ PRELOADER ============================ -->
+  <div class="preloader-w" data-preloader>
+    <div class="preloader-logo-w">
+      <div class="preloader-wordmark" aria-label="TDE ROCKS">
+        <span class="wm-tde">TDE</span>
+        <span class="wm-dot"></span>
+        <span class="wm-rocks">ROCKS</span>
+      </div>
+    </div>
+    <div class="preloader-text-w">
+      <span class="text-counter" data-preloader-counter>00</span>
+    </div>
+  </div>
+
+  <!-- ======================== HOMEPAGE INTRO =========================== -->
+  <div class="homepage-intro-w" data-intro>
+    <div class="homepage-intro-mask"></div>
+    <div class="homepage-intro-target-w">
+      <div class="homepage-intro-target"></div>
+      <div class="homepage-intro-info-w">
+        <div class="homepage-intro-info-layout">
+          <div class="homepage-intro-line-w"><div class="homepage-intro-line-h"></div></div>
+          <div>
+            <p class="text-navigation">El ecosistema</p>
+            <p class="text-body">Tres divisiones. Un sistema. Explora el anillo para descubrir cada una.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================= NAV ================================ -->
+  <header class="nav-w" data-nav>
+    <div class="c is-nav">
+      <div class="nav-inner">
+        <a href="#" class="nav-brand" aria-label="TDE home">
+          <img class="nav-brand-logo" src="assets/tde-logo-nav.png" alt="TDE" />
+        </a>
+
+        
+
+        <div class="nav-menu-btn-w">
+          <button class="nav-menu-btn text-navigation" data-menu-btn aria-expanded="false" aria-controls="nav-menu">
+            <span class="is-menu-toggle" data-menu-toggle="open">Menu</span>
+            <span class="is-menu-toggle" data-menu-toggle="close">Close</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-underlay" data-nav-underlay></div>
+
+    <!-- full screen menu -->
+    <nav class="nav-menu" id="nav-menu" aria-label="Main">
+      <div class="nav-menu-layout">
+
+        <div class="nav-menu-links-w">
+          <ul class="nav-links-list">
+            <li class="nav-li">
+              <a href="#" class="nav-link is-current" data-menu-link>
+                <span class="nav-link-inner">
+                  <span class="nav-link-brackets-w text-navigation">[
+                    <svg class="nav-active-icon" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><circle cx="5" cy="5" r="4.4"/></svg>
+                  ]</span>
+                  <span class="nav-link-text-w">
+                    <span class="text-title-mission is-navlink">Home</span>
+                    <span class="nav-link-line-w red">
+                      <svg class="nav-link-sketch-line" viewBox="0 0 200 44" fill="none" preserveAspectRatio="none">
+                        <path d="M4 30 C 40 20, 120 12, 196 16 C 150 18, 60 24, 18 32" stroke="currentColor" stroke-width="3" stroke-linecap="round" pathLength="610"/>
+                      </svg>
+                    </span>
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li class="nav-li">
+              <a href="#citizen" class="nav-link" data-menu-link>
+                <span class="nav-link-inner">
+                  <span class="nav-link-brackets-w text-navigation">[
+                    <svg class="nav-active-icon" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><circle cx="5" cy="5" r="4.4"/></svg>
+                  ]</span>
+                  <span class="nav-link-text-w">
+                    <span class="text-title-mission is-navlink">Citizen-Facing AI</span>
+                    <span class="nav-link-line-w green">
+                      <svg class="nav-link-sketch-line" viewBox="0 0 200 44" fill="none" preserveAspectRatio="none">
+                        <path d="M4 30 C 40 20, 120 12, 196 16 C 150 18, 60 24, 18 32" stroke="currentColor" stroke-width="3" stroke-linecap="round" pathLength="610"/>
+                      </svg>
+                    </span>
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li class="nav-li">
+              <a href="#consumer" class="nav-link" data-menu-link>
+                <span class="nav-link-inner">
+                  <span class="nav-link-brackets-w text-navigation">[
+                    <svg class="nav-active-icon" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><circle cx="5" cy="5" r="4.4"/></svg>
+                  ]</span>
+                  <span class="nav-link-text-w">
+                    <span class="text-title-mission is-navlink">Consumer-Facing AI</span>
+                    <span class="nav-link-line-w blue">
+                      <svg class="nav-link-sketch-line" viewBox="0 0 200 44" fill="none" preserveAspectRatio="none">
+                        <path d="M4 30 C 40 20, 120 12, 196 16 C 150 18, 60 24, 18 32" stroke="currentColor" stroke-width="3" stroke-linecap="round" pathLength="610"/>
+                      </svg>
+                    </span>
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li class="nav-li">
+              <a href="#assistant" class="nav-link" data-menu-link>
+                <span class="nav-link-inner">
+                  <span class="nav-link-brackets-w text-navigation">[
+                    <svg class="nav-active-icon" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><circle cx="5" cy="5" r="4.4"/></svg>
+                  ]</span>
+                  <span class="nav-link-text-w">
+                    <span class="text-title-mission is-navlink">Private Personal Assistant</span>
+                    <span class="nav-link-line-w yellow">
+                      <svg class="nav-link-sketch-line" viewBox="0 0 200 44" fill="none" preserveAspectRatio="none">
+                        <path d="M4 30 C 40 20, 120 12, 196 16 C 150 18, 60 24, 18 32" stroke="currentColor" stroke-width="3" stroke-linecap="round" pathLength="610"/>
+                      </svg>
+                    </span>
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li class="nav-li nav-link-group">
+              <a href="#contact" class="nav-link" data-contact-open>
+                <span class="nav-link-inner">
+                  <span class="nav-link-brackets-w text-navigation">[
+                    <svg class="nav-active-icon" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><circle cx="5" cy="5" r="4.4"/></svg>
+                  ]</span>
+                  <span class="nav-link-text-w">
+                    <span class="text-title-mission is-navlink">Contact</span>
+                  </span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-w text-footer">
+          <div class="footer-group">
+            <a class="footer-link-w" href="#">Instagram</a>
+            <a class="footer-link-w" href="#">LinkedIn</a>
+            <a class="footer-link-w" href="#">X</a>
+          </div>
+          <div class="footer-group">
+            <a class="footer-link-w" href="#">Privacy</a>
+            <a class="footer-link-w" href="#">Terms</a>
+            <span class="footer-link-w">© 2026 TDE</span>
+          </div>
+          <div class="footer-link-w auto-left">
+            <button class="toggle-w is-nav" data-theme-toggle aria-label="Cambiar tema">
+              <span class="toggle-track"><span class="toggle-dot"></span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- contact panel -->
+    <aside class="contact-w" aria-label="Contact">
+      <div class="manifesto-btn-w">
+        <button class="btn-w" data-contact-close>
+          <span class="btn-inner-w"><span class="text-button" data-label="Close">Close</span></span>
+        </button>
+      </div>
+      <div class="manifesto-layout">
+        <h2 class="text-title-mission">Contact</h2>
+        <form class="contact-form" data-contact-form>
+          <label class="cf-label" for="cf-name">Name</label>
+          <input class="cf-input" id="cf-name" name="name" type="text" autocomplete="name" required />
+          <label class="cf-label" for="cf-email">Email</label>
+          <input class="cf-input" id="cf-email" name="email" type="email" autocomplete="email" required />
+          <label class="cf-label" for="cf-msg">Message</label>
+          <textarea class="cf-input cf-area" id="cf-msg" name="message" rows="5" required></textarea>
+          <button class="cf-send" type="submit">Send</button>
+          <p class="cf-ok text-body" hidden data-contact-ok>Thank you — we will get back to you shortly.</p>
+        </form>
+      </div>
+    </aside>
+
+    <!-- manifesto panel -->
+    <aside class="manifesto-w" aria-label="Manifesto">
+      <div class="manifesto-btn-w">
+        <button class="btn-w" data-manifesto-close>
+          <span class="btn-inner-w"><span class="text-button" data-label="Close">Close</span></span>
+        </button>
+      </div>
+      <div class="manifesto-layout">
+        <h2 class="text-title-mission">Manifesto</h2>
+        <p class="text-body">Somewhere, right now, someone is standing in front of a screen, trying to hold fifteen steps in their head when they can barely hold onto one. A permit. A doctor's appointment they keep meaning to book. The system was designed around itself, and the person was expected to adapt.</p>
+        <p class="text-body">Technology promised to give us back our time. Instead, every service became its own portal, every portal another password and another form and the smartest era in history still puts people on hold.</p>
+        <p class="text-body">Machines learned to understand us years ago. What matters now is what happens after they do.</p>
+        <p class="text-body">TDE was born from one conviction: <strong>technology should never make anyone feel small for how they think</strong>. People don't think in fields and dropdowns. Some of us think in bursts; some remember better by talking than by typing. No one should have to carry in their head what a system can carry for them, and a person's dignity should never depend on how well they follow a process. Far beyond an accessibility feature, this is the reason we exist.</p>
+        <p class="text-body">We believe the next decade belongs to interconnected AI: intelligence woven into the systems the world already runs on, so people stop being the ones connecting them by hand.</p>
+        <p class="text-body">That's why we build <strong>VelaOS</strong>: the core where asking for something, once, in your own words, becomes something real. An appointment booked. A request filed. A problem that stays solved.</p>
+        <p class="text-body c-lighten">In the end, we measure our work by one thing: whether someone, finally, felt taken care of.</p>
+        <p class="manifesto-signature">— TDE</p>
+      </div>
+    </aside>
+  </header>
+
+  <!-- =========================== PAGE ================================= -->
+  <div class="page-w">
+    <!-- webgl -->
+    <div class="canvas-w"><canvas class="canvas" data-gl-canvas></canvas></div>
+    <div class="vignette"></div>
+    <div class="grain"></div>
+
+    <!-- floating 3d labels (desktop) -->
+    <div class="gl-labels" data-gl-labels>
+      <a class="gl-label" href="#media" data-gl-label="0"><span class="gl-label-dot"></span><span class="text-button">Creator Media</span></a>
+      <a class="gl-label" href="#communities" data-gl-label="1"><span class="gl-label-dot"></span><span class="text-button">Creator Communities</span></a>
+      <a class="gl-label" href="#products" data-gl-label="2"><span class="gl-label-dot"></span><span class="text-button">Creator Products</span></a>
+      <a class="gl-label" href="#tech" data-gl-label="3"><span class="gl-label-dot"></span><span class="text-button">Creator Tech</span></a>
+    </div>
+
+    <!-- hero -->
+    <main>
+      <section class="s">
+        <div class="c is-home">
+          <div class="hero-layout is-home">
+            <div class="content-layout is-home">
+              <div class="hero-title-w reveal d-1">
+                <h1 class="text-title-homepage">WHERE CONVERSATION<br/>BECOMES EXECUTION.</h1>
+                <span class="hero-strike-w">
+                  <svg viewBox="0 0 300 20" fill="none" preserveAspectRatio="none">
+                    <path d="M4 14 C 60 8, 180 4, 296 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" pathLength="620"/>
+                  </svg>
+                </span>
+              </div>
+              <p class="text-body ch-max-30 reveal d-2"></p>
+              <div class="hero-btns-w reveal d-3">
+                <div class="hero-desktop-btn-w">
+                <button class="btn-w" data-manifesto-open>
+                  <span class="btn-inner-w"><span class="text-button" data-label="About us">About us</span></span>
+                  <span class="btn-icon-w">
+                    <span class="btn-ellipse-w">
+                      <svg class="btn-ellipse-base" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18.2" stroke="currentColor" stroke-width="1.4"/></svg>
+                      <svg class="btn-ellipse-progress" viewBox="0 0 40 40" fill="none" style="transform:rotate(-90deg)"><circle class="circle-progress" cx="20" cy="20" r="18.2" stroke="currentColor" stroke-width="1.4" pathLength="114"/></svg>
+                    </span>
+                    <span class="btn-icon">
+                      <span class="btn-icon-arr-w"><svg viewBox="0 0 12 12" fill="none" width="100%"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                      <span class="btn-icon-arr-w"><svg viewBox="0 0 12 12" fill="none" width="100%"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    </span>
+                  </span>
+                </button>
+                </div>
+                <div class="hero-mobile-btn-w">
+                <button class="btn-w" data-manifesto-open>
+                  <span class="btn-inner-w"><span class="text-button" data-label="About us">About us</span></span>
+                </button>
+                </div>
+              </div>
+
+              <!-- mobile arm links carousel -->
+              <div class="hero-arm-links-w">
+                <div class="hero-arm-links-track" data-arm-track>
+                  <a class="btn-w is-arm active" href="#citizen"><span class="btn-inner-w caps"><span class="text-button" data-label="Citizen-Facing AI">Citizen-Facing AI</span></span></a>
+                  <a class="btn-w is-arm" href="#consumer"><span class="btn-inner-w caps"><span class="text-button" data-label="Consumer-Facing AI">Consumer-Facing AI</span></span></a>
+                  <a class="btn-w is-arm" href="#assistant"><span class="btn-inner-w caps"><span class="text-button" data-label="Private Personal Assistant">Private Personal Assistant</span></span></a>
+                </div>
+                <div class="hero-arm-nav-w">
+                  <button class="btn-w is-arm-nav" data-arm-prev aria-label="Anterior">
+                    <span class="btn-icon is-left"><span class="btn-icon-arr-w"><svg viewBox="0 0 12 12" fill="none" width="100%"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+                  </button>
+                  <button class="btn-w is-arm-nav" data-arm-next aria-label="Siguiente">
+                    <span class="btn-icon"><span class="btn-icon-arr-w"><svg viewBox="0 0 12 12" fill="none" width="100%"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================== SECTIONS ============================ -->
+      <div class="sections-w">
+        <section class="s section-block" id="citizen" data-section>
+          <div class="c">
+            <div class="section-layout">
+              <p class="text-navigation section-index c-lighten">[ 01 ]</p>
+              <h2 class="text-title-mission section-title">Citizen-<br/>Facing AI</h2>
+              <div class="section-body-w">
+                <p class="text-body ch-max-30">Public services, completed in one conversation. VelaOS listens, understands, and gets the procedure done, on the systems your government runs.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="s section-block" id="consumer" data-section>
+          <div class="c">
+            <div class="section-layout">
+              <p class="text-navigation section-index c-lighten">[ 02 ]</p>
+              <h2 class="text-title-mission section-title">Consumer-<br/>Facing AI</h2>
+              <div class="section-body-w">
+                <p class="text-body ch-max-30">Conversations that close the loop. VelaOS listens, understands, and resolves it for good, inside the tools your business already trusts.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="s section-block" id="assistant" data-section>
+          <div class="c">
+            <div class="section-layout">
+              <p class="text-navigation section-index c-lighten">[ 03 ]</p>
+              <h2 class="text-title-mission section-title">Private<br/>Personal<br/>Assistant</h2>
+              <div class="section-body-w">
+                <p class="text-body ch-max-30">Intelligence that's truly yours. VelaOS listens and acts on your behalf, keeping your data, memory, and privacy entirely your own.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="s section-block" id="tde" data-section>
+          <div class="c">
+            <div class="section-layout">
+              <p class="text-navigation section-index c-lighten">[ 00 ]</p>
+              <h2 class="text-title-mission section-title">Technology<br/>Design<br/>Experience</h2>
+              <div class="section-body-w">
+                <p class="text-body ch-max-30">TDE builds AI that listens, understands, and gets things done, turning conversation into action on every surface, in every language.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="section-footer">
+          <div class="c">
+            <p class="text-navigation c-lighten">Technologies &middot; Design &middot; Experience</p>
+            <p class="text-footer c-lighten">&copy; 2026 TDE</p>
+          </div>
+        </footer>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ===================== SECTION VIEW (zoom target) ================= -->
+  <div class="section-view" data-section-view>
+    <div class="section-view-scroll" data-sv-scroll>
+      <header class="sv-hero">
+        <video data-sv-video muted loop playsinline preload="auto"></video>
+        <div class="sv-shade"></div>
+        <div class="c sv-hero-content">
+          <h1 class="text-title-mission sv-title"><span data-sv-title>Section</span></h1>
+        </div>
+        <button class="sv-chevron" data-sv-scrolldown aria-label="Scroll down">
+          <svg viewBox="0 0 24 24" fill="none" width="26"><path d="M4 9l8 8 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </header>
+      <div class="sv-content" data-sv-content></div>
+      <footer class="section-footer"><div class="c">
+        <p class="text-navigation c-lighten">Technologies &middot; Design &middot; Experiences</p>
+      </div></footer>
+    </div>
+    <button class="btn-w sv-close" data-sv-close>
+      <span class="btn-inner-w"><span class="text-button" data-label="Back">Back</span></span>
+    </button>
+  </div>
+
+  <!-- =========================== COOKIES ============================== -->
+  <div class="cookie-w hide" data-cookie>
+    <div class="cookie-layout">
+      <p class="text-body">Select "Accept" to allow cookies and similar technologies that improve your browsing experience, security and analytics.</p>
+      <div class="cookie-btns text-navigation">
+        <button class="cookie-btn" data-cookie-accept>Accept</button>
+        <button class="cookie-btn" data-cookie-deny>No, thanks</button>
+      </div>
+    </div>
+  </div>
+
+  <video data-center-video crossorigin="anonymous" src="assets/center.mp4?cors=1" muted loop playsinline autoplay
+         style="position:fixed;width:2px;height:2px;opacity:0;pointer-events:none" aria-hidden="true"></video>
+
+  <script type="importmap">
+    { "imports": {
+      "three": "https://unpkg.com/three@0.161.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/"
+    } }
+  </script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="js/app.js?v=83" defer></script>
+  <script type="module" src="js/gl.js?v=83"></script>
+</body>
+</html>
